@@ -4,7 +4,7 @@ import React, { createContext, useState } from 'react';
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(); // Виправлено на undefined
+    const [user, setUser] = useState();
 
     const login = (userData) => {
         setUser(userData);
@@ -12,7 +12,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     const logout = () => {
-        setUser(undefined); // Виправлено на undefined
+        setUser(undefined);
         localStorage.removeItem('user');
     };
 
@@ -20,5 +20,5 @@ export const AuthProvider = ({ children }) => {
 };
 
 AuthProvider.propTypes = {
-    children: PropTypes.node.isRequired, // Додано валідацію для children
+    children: PropTypes.node.isRequired,
 };
