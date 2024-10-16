@@ -22,12 +22,15 @@ const config = {
     ],
     /* https://github.com/import-js/eslint-plugin-import */
     settings: {
+        react: {
+            version: 'detect',
+        },
         'import/resolver': {
             node: {
-                extensions: ['.js', '.jsx'],
+                extensions: ['.js', '.jsx'], // Щоб ESLint розумів ці розширення
             },
             webpack: {
-                config: './config/webpack.dev.config.js',
+                config: './config/webpack.dev.config.js', // Шлях до файлу конфігурації Webpack
             },
         },
     },
