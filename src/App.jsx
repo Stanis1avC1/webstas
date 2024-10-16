@@ -8,8 +8,6 @@ const App = () => {
     return (
         <div className={styles.main} data-testid="app">
             My first application
-            <h1>Привіт я стас</h1>
-            <a>Привіт</a>
         </div>
     );
 };
